@@ -17,4 +17,5 @@ public class RecommendFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.recommend_fragment,null);
     }
+
 }
