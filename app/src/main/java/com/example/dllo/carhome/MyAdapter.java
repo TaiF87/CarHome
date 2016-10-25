@@ -11,11 +11,11 @@ import java.util.ArrayList;
  */
 public class MyAdapter extends FragmentPagerAdapter{
     ArrayList<Fragment> fragments;
-  //  String[] title = {"推荐","优创+","说客","视频","快报","行情", "新闻","评测","导购","用车","技术","文化","改装"};
+    String[] title = {"推荐","优创+","说客","视频","快报","行情", "新闻","评测","导购","用车","技术","文化","改装"};
 
     public void setFragments(ArrayList<Fragment> fragments) {
         this.fragments = fragments;
-    //    notifyDataSetChanged();
+        notifyDataSetChanged();
     }
 
     public MyAdapter(FragmentManager fm) {
@@ -32,8 +32,8 @@ public class MyAdapter extends FragmentPagerAdapter{
         return fragments == null ? 0 : fragments.size();
     }
 
-//    @Override
-//    public CharSequence getPageTitle(int position) {
-//        return title[position];
-//    }
+    @Override
+    public CharSequence getPageTitle(int position) {
+        return title[position];
+    }
 }

@@ -21,7 +21,14 @@ public abstract class BaseAty extends AppCompatActivity {
     protected abstract int getLayout();
     protected abstract void initViews();
     protected abstract void initData();
+
     protected  <T extends View> T bindView(int id){
         return (T) findViewById(id);
+    }
+
+    protected void setClick(View.OnClickListener clickListener,View ...views){
+        for (View view : views){
+            view.setOnClickListener(clickListener);
+        }
     }
 }

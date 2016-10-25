@@ -13,11 +13,6 @@
         android:id="@+id/fl_recommend">
     </FrameLayout>
 
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#fbfa0404"/>
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="0dp"

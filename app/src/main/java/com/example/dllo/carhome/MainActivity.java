@@ -1,8 +1,12 @@
 package com.example.dllo.carhome;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 
@@ -23,11 +27,13 @@ import com.example.dllo.carhome.fragment.VideoFragment;
 
 import java.util.ArrayList;
 
-public class MainActivity extends BaseAty {
+public class MainActivity extends BaseAty implements View.OnClickListener {
 
-    private TabLayout mainTb;
-    private ViewPager mainVp;
-    private ArrayList<Fragment> fragments;
+    private RadioButton rbRecommend;
+    private RadioButton rbForum;
+    private RadioButton rbBrand;
+    private RadioButton rbFind;
+    private RadioButton rbMe;
 
     @Override
     protected int getLayout() {
@@ -36,46 +42,44 @@ public class MainActivity extends BaseAty {
 
     @Override
     protected void initViews() {
-        FrameLayout flRecommend = bindView(R.id.fl_recommend);
-        RadioButton rbRecommend = bindView(R.id.rb_recommend);
-        RadioButton rbForum = bindView(R.id.rb_forum);
-        RadioButton rbBrand = bindView(R.id.rb_brand);
-        RadioButton rbFind = bindView(R.id.rb_find);
-        RadioButton rbMe = bindView(R.id.rb_me);
-//        mainTb = bindView(R.id.tb_main);
-//        mainVp = bindView(R.id.vp_main);
-//
-//        MyAdapter adapter = new MyAdapter(getSupportFragmentManager());
-//        adapter.setFragments(fragments);
-//        mainVp.setAdapter(adapter);
-//        mainTb.setupWithViewPager(mainVp);
 
+        rbRecommend = bindView(R.id.rb_recommend);
+        rbForum = bindView(R.id.rb_forum);
+        rbBrand = bindView(R.id.rb_brand);
+        rbFind = bindView(R.id.rb_find);
+        rbMe = bindView(R.id.rb_me);
+
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        setClick(this,rbRecommend,rbForum,rbBrand,rbFind,rbMe);
     }
 
     @Override
     protected void initData() {
-       //initFragment();
-
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.replace(R.id.fl_recommend,new RecommendButton());
+        transaction.commit();
     }
-//    private void initFragment(){
-//        fragments = new ArrayList<>();
-//        fragments.add(new RecommendFragment());
-//        fragments.add(new FineFragment());
-//        fragments.add(new LobbyistFragment());
-//        fragments.add(new VideoFragment());
-//        fragments.add(new LettersFragment());
-//        fragments.add(new MarketFragment());
-//        fragments.add(new NewsFragment());
-//        fragments.add(new PingceFragment());
-//        fragments.add(new ShoppersFragment());
-//        fragments.add(new CharFragment());
-//        fragments.add(new TechnologyFragment());
-//        fragments.add(new CultureFragment());
-//        fragments.add(new ModifiedFragment());
-//    }
-//    private void initTabs(){
-//        int[] selectors = {
-//
-//        };
-//    }
+
+    @Override
+    public void onClick(View view) {
+
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        switch (view.getId()){
+            case R.id.rb_recommend:
+               transaction.replace(R.id.fl_recommend,new RecommendButton());
+                transaction.commit();
+                break;
+            case R.id.rb_forum:
+                break;
+            case R.id.rb_brand:
+                break;
+            case R.id.rb_find:
+                break;
+            case R.id.rb_me:
+                break;
+        }
+    }
 }
