@@ -2,18 +2,13 @@ package com.example.dllo.carhome.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.dllo.carhome.MyAdapter;
 import com.example.dllo.carhome.R;
-
-import java.util.ArrayList;
+import com.example.dllo.carhome.fragmentbutton.recommend.RecommendAdapter;
 
 /**
  * Created by dllo on 16/10/24.

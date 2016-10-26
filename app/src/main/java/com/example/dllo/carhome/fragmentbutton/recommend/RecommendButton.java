@@ -1,4 +1,4 @@
-package com.example.dllo.carhome;
+package com.example.dllo.carhome.fragmentbutton.recommend;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.dllo.carhome.MyAdapter;
+import com.example.dllo.carhome.R;
 import com.example.dllo.carhome.fragment.CharFragment;
 import com.example.dllo.carhome.fragment.CultureFragment;
 import com.example.dllo.carhome.fragment.FineFragment;
@@ -37,7 +39,7 @@ public class RecommendButton extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.technology_button,null);
+        return inflater.inflate(R.layout.recommend_button,null);
     }
 
     @Override
