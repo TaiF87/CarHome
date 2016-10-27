@@ -64,7 +64,7 @@ public class RecommendButton extends Fragment {
         fragments.add(new CultureFragment());
         fragments.add(new ModifiedFragment());
 
-        MyAdapter adapter = new MyAdapter(getFragmentManager());
+        MyAdapter adapter = new MyAdapter(getChildFragmentManager());
         adapter.setFragments(fragments);
         mainVp.setAdapter(adapter);
         mainTb.setupWithViewPager(mainVp);

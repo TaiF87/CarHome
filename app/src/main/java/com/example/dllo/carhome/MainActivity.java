@@ -32,8 +32,6 @@ public class MainActivity extends BaseAty implements View.OnClickListener {
         rbFind = bindView(R.id.rb_find);
         rbMe = bindView(R.id.rb_me);
 
-//        FragmentManager manager = getSupportFragmentManager();
-//        FragmentTransaction transaction = manager.beginTransaction();
         setClick(this,rbRecommend,rbForum,rbBrand,rbFind,rbMe);
     }
 

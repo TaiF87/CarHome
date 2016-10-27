@@ -1,5 +1,6 @@
 package com.example.dllo.carhome.fragmentbutton.brand;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -38,5 +39,6 @@ public class ChooseButton extends Fragment{
         chooseAdapter.setFragments(fragments);
         vpChoose.setAdapter(chooseAdapter);
         tbChoose.setupWithViewPager(vpChoose);
+        tbChoose.setSelectedTabIndicatorColor(Color.BLACK);
     }
 }

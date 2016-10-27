@@ -1,9 +1,11 @@
 package com.example.dllo.carhome.fragmentbutton.forum;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
@@ -12,7 +14,7 @@ import java.util.ArrayList;
  */
 public class ForumAdapter extends FragmentPagerAdapter{
     String[] title = {"精选","论坛"};
-    ArrayList<Fragment> fragments;
+    private ArrayList<Fragment> fragments;
 
     public void setFragments(ArrayList<Fragment> fragments) {
         this.fragments = fragments;
@@ -22,9 +24,9 @@ public class ForumAdapter extends FragmentPagerAdapter{
         super(fm);
     }
 
-
     @Override
     public Fragment getItem(int position) {
+
         return fragments.get(position);
     }
 
@@ -32,6 +34,7 @@ public class ForumAdapter extends FragmentPagerAdapter{
     public int getCount() {
         return fragments == null ? 0 : fragments.size();
     }
+
 
     @Override
     public CharSequence getPageTitle(int position) {

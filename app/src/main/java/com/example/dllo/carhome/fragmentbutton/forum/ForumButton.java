@@ -35,7 +35,7 @@ public class ForumButton extends Fragment {
         fragments.add(new SelectFragment());
         fragments.add(new ForumFragment());
 
-        ForumAdapter forumAdapter = new ForumAdapter(getFragmentManager());
+        ForumAdapter forumAdapter = new ForumAdapter(getChildFragmentManager());
         forumAdapter.setFragments(fragments);
         vpForum.setAdapter(forumAdapter);
         tbForum.setupWithViewPager(vpForum);
