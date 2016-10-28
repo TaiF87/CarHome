@@ -1,9 +1,9 @@
-package com.example.dllo.carhome.fragment;
+package com.example.dllo.carhome.fragmentbutton.recommend;
 
 /**
  * Created by dllo on 16/10/25.
  */
-public class Recommend {
+public class RecommendItem {
     String text;
     String date;
     String pic;

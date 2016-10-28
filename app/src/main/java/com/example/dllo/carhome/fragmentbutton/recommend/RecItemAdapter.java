@@ -7,18 +7,17 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.example.dllo.carhome.R;
-import com.example.dllo.carhome.fragment.Recommend;
 
 import java.util.ArrayList;
 
 /**
  * Created by dllo on 16/10/25.
  */
-public class RecommendAdapter extends BaseAdapter{
+public class RecItemAdapter extends BaseAdapter{
     Context context;
-    ArrayList<Recommend> recommends;
+    ArrayList<RecommendItem> recommends;
 
-    public RecommendAdapter(Context context) {
+    public RecItemAdapter(Context context) {
         this.context = context;
     }
 
