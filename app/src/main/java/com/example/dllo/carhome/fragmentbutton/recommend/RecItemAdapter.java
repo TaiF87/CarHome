@@ -2,12 +2,14 @@ package com.example.dllo.carhome.fragmentbutton.recommend;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.dllo.carhome.R;
 
@@ -47,8 +49,14 @@ public class RecItemAdapter extends RecyclerView.Adapter{
 //        myViewHolder.tvCaption.setText(recommendItems.get(position).getDate());
 //        myViewHolder.tvReply.setText(recommendItems.get(position).getDate());
 //        myViewHolder.ivPic.setImageResource(R.mipmap.ic_launcher);
+        Log.d("RecItemAdapter", "onBind");
         myViewHolder.tvReply.setText(arrayList.get(position));
-
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(context, "asdf", Toast.LENGTH_SHORT).show();
+                }
+            });
 
     }
 

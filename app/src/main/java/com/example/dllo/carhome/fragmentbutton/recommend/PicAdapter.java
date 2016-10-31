@@ -23,6 +23,7 @@ public class PicAdapter extends PagerAdapter{
     public int getCount() {
         return url == null ? 0 : Integer.MAX_VALUE;
     }
+
     public int getImagCount(){
         return url.length;
     }

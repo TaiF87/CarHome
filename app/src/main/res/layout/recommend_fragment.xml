@@ -4,24 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/rvh_recommend">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
-        <android.support.v4.view.ViewPager
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/vp_carousel"/>
-    </RelativeLayout>
-    </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>
-
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rv_recommend">
     </android.support.v7.widget.RecyclerView>
 
+    <com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/rvh_recommend">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/vp_carousel"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="bottom"
+            android:layout_alignBottom="@+id/vp_carousel"
+            android:id="@+id/ll_point">
+        </LinearLayout>
+    </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>
 </FrameLayout>

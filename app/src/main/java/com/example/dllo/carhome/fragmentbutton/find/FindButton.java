@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.dllo.carhome.R;
 
 /**
@@ -16,7 +15,7 @@ public class FindButton extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        return inflater.inflate(R.layout.)
-        return null;
+        return inflater.inflate(R.layout.find_fragment,container,false);
+
     }
 }
